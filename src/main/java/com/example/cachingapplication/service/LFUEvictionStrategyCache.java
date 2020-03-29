@@ -5,6 +5,17 @@ import com.example.cachingapplication.model.Node;
 import java.util.HashMap;
 import java.util.Map;
 
+/**
+ * <p>This is a cache implementation based on {@link com.example.cachingapplication.service.Cache Cache} Interface.</p>
+ * <p>This implementation uses the Least Frequently Used (LFU) as the eviction strategy</p>
+ *
+ * @param <K> Data type of the Key
+ * @param <V> Data type of the Value
+ *
+ * @author yomal
+ * @version 1.0
+ * @since 1.0
+ */
 public class LFUEvictionStrategyCache<K, V> implements Cache <K, V> {
 
     private Node<K, V> tail; // dummy tail to keep track of the least used and newest
